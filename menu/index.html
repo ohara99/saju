@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>오하라 사주·운세</title>
+<style>
+  :root{
+    --bg-top:#241a33; --bg-mid:#322445; --bg-bot:#1d1528;
+    --gold:#d8b888; --gold-dim:#b8966a;
+    --cream:#f3ecf5; --lav:#b89fd6; --sub:#a594b8;
+    --card:rgba(243,236,245,0.06);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html,body{height:100%;}
+  body{
+    font-family:"Nanum Myeongjo","Nanum Gothic",serif;
+    background:linear-gradient(170deg, var(--bg-top) 0%, var(--bg-mid) 55%, var(--bg-bot) 100%);
+    background-attachment:fixed;
+    min-height:100vh;
+    display:flex; align-items:center; justify-content:center;
+    padding:24px 16px;
+    color:var(--cream);
+  }
+  .wrap{
+    width:100%; max-width:600px;
+    position:relative;
+    padding:48px 28px 42px;
+    border-radius:16px;
+  }
+  .frame-out, .frame-in{
+    position:absolute; pointer-events:none; border-radius:10px;
+  }
+  .frame-out{ inset:14px; border:1px solid rgba(216,184,136,0.55); }
+  .frame-in{ inset:18px; border:0.5px solid rgba(184,150,106,0.4); border-radius:8px; }
+  .inner{ position:relative; z-index:1; text-align:center; }
+  .eyebrow{ font-size:13px; letter-spacing:0.5em; color:var(--gold); margin-bottom:16px; }
+  h1{ font-size:29px; font-weight:700; letter-spacing:0.04em; color:var(--cream); }
+  .tagline{ font-size:14px; color:var(--lav); margin-top:11px; }
+  .divider{
+    display:flex; align-items:center; justify-content:center; gap:9px;
+    margin:24px 0 28px;
+  }
+  .divider span.line{ height:1px; width:48px; background:rgba(184,150,106,0.6); }
+  .divider span.dot{ color:var(--gold); font-size:11px; }
+  .grid{ display:grid; grid-template-columns:1fr 1fr; gap:15px; }
+  a.menu{
+    text-decoration:none; display:block;
+    background:var(--card);
+    border:1px solid rgba(216,184,136,0.45);
+    border-radius:11px;
+    padding:24px 12px;
+    transition:transform .15s ease, background .15s ease, border-color .15s ease;
+  }
+  a.menu:hover{
+    background:rgba(243,236,245,0.12);
+    border-color:var(--gold);
+    transform:translateY(-2px);
+  }
+  a.menu .ic{ font-size:26px; margin-bottom:9px; }
+  a.menu .label{ font-size:18px; font-weight:700; color:var(--cream); }
+  a.menu .desc{ font-size:12px; color:var(--sub); margin-top:6px; line-height:1.4; }
+  .foot{ margin-top:28px; font-size:11.5px; color:var(--sub); line-height:1.6; }
+  @media (max-width:380px){
+    .grid{ grid-template-columns:1fr; }
+    h1{ font-size:25px; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="frame-out"></div>
+    <div class="frame-in"></div>
+    <div class="inner">
+      <div class="eyebrow">運 勢</div>
+      <h1>오하라 사주·운세</h1>
+      <div class="tagline">태어난 날로 보는 나의 흐름</div>
+
+      <div class="divider">
+        <span class="line"></span><span class="dot">◆</span><span class="line"></span>
+      </div>
+
+      <div class="grid">
+        <a class="menu" href="saju-app/">
+          <div class="ic">☯</div>
+          <div class="label">사주</div>
+          <div class="desc">타고난 사주팔자 풀이</div>
+        </a>
+        <a class="menu" href="sinnyeon/">
+          <div class="ic">🎍</div>
+          <div class="label">신년운세</div>
+          <div class="desc">올 한 해의 흐름</div>
+        </a>
+        <a class="menu" href="unse/">
+          <div class="ic">🌙</div>
+          <div class="label">운세</div>
+          <div class="desc">오늘과 이달의 운</div>
+        </a>
+        <a class="menu" href="gunghap/">
+          <div class="ic">💞</div>
+          <div class="label">궁합</div>
+          <div class="desc">두 사람의 인연</div>
+        </a>
+      </div>
+
+      <div class="foot">고전 명리에 기반한 자기 이해용 참고 자료예요.<br>미래를 단정하거나 의학·법률·재무 판단의 근거가 아니에요.</div>
+    </div>
+  </div>
+</body>
+</html>
